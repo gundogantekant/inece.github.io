@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2025 Inece Summer Picnic by Tekant</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+      background: #f5f5f5;
+    }
+    .tab {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .tabs {
+      margin-bottom: 1em;
+    }
+    .tabs button {
+      padding: 0.5em 1em;
+      margin-right: 0.5em;
+      cursor: pointer;
+    }
+    .content {
+      background: #fff;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tabs">
+  <button onclick="showTab('en')">🇬🇧 English</button>
+  <button onclick="showTab('tr')">🇹🇷 Türkçe</button>
+</div>
+
+<div id="en" class="tab">
+  <div class="content">
+    <h1>📅 <a href="https://calendar.app.google/YyPfxWtuDxxTgDed9" target="_blank">2025 Inece Summer Picnic by Tekant</a></h1>
+    <p>I prepare the 🐑 <strong>Kuzu Tandir</strong> and 🥗 Meze, you bring 🍷 alcoholic beverages to share with others!</p>
+    <ul>
+      <li>🕑 14.00 – Get together and start drinking</li>
+      <li>🧆 16.00 – Meze offerings</li>
+      <li>🍖 19.00 – Kuzu Tandir</li>
+      <li>🎧 22.00 – DJ Murat & DJ Burak</li>
+      <li>🥣 02.00 – Maybe a soup service</li>
+    </ul>
+    <p>📍 Location: <a href="https://maps.app.goo.gl/H1BidWaJ9QE2v89t6" target="_blank">Government Picnic Area</a></p>
+    <p>🏨 If you need accommodation, I am arranging a hotel. Reach out to me for coordination.</p>
+    <p>🚌 For those coming with public transportation, I will pick you up from the bus station.</p>
+  </div>
+</div>
+
+<div id="tr" class="tab">
+  <div class="content">
+    <h1>📅 <a href="https://calendar.app.google/YyPfxWtuDxxTgDed9" target="_blank">2025 Inece Yaz Pikniği - Tekant’tan</a></h1>
+    <p>🐑 <strong>Kuzu Tandır</strong> ve 🥗 Mezeleri ben hazırlıyorum, siz de 🍷 alkolünüzü getirip paylaşın!</p>
+    <ul>
+      <li>🕑 14.00 – Toplanma ve içkilere başlama</li>
+      <li>🧆 16.00 – Meze servisi</li>
+      <li>🍖 19.00 – Kuzu Tandır</li>
+      <li>🎧 22.00 – DJ Murat & DJ Burak</li>
+      <li>🥣 02.00 – Belki çorba servisi</li>
+    </ul>
+    <p>📍 Yer: <a href="https://maps.app.goo.gl/H1BidWaJ9QE2v89t6" target="_blank">Devlet Piknik Alanı</a></p>
+    <p>🏨 Konaklama gerekiyorsa otel ayarlıyorum. Detaylar için bana ulaşın.</p>
+    <p>🚌 Toplu taşımayla gelenleri otobüs terminalinden alacağım.</p>
+  </div>
+</div>
+
+<script>
+  function showTab(lang) {
+    document.getElementById('en').classList.remove('active');
+    document.getElementById('tr').classList.remove('active');
+    document.getElementById(lang).classList.add('active');
+  }
+
+  // Detect browser language
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang.startsWith('tr')) {
+    showTab('tr');
+  } else {
+    showTab('en');
+  }
+</script>
+
+</body>
+</html>
